@@ -10,7 +10,7 @@ public interface EmpMapper {
 	public List<EmpVO> selectAllEmp();
 	
 	//단건조회
-	public EmpVO selectEmpInfo();
+	public EmpVO selectEmpInfo(EmpVO empVO);
 	
 	//등록
 	public int insertEmpInfo(EmpVO empVO);

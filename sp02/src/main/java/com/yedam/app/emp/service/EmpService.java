@@ -8,7 +8,7 @@ public interface EmpService {
 	public List<EmpVO> getEmpAllList();
 	
 	//단건조회
-	public EmpVO getEmpInfo();
+	public EmpVO getEmpInfo(EmpVO empVO);
 	
 	//등록
 	public int insertEmpInfo(EmpVO empVO);
