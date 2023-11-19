@@ -43,8 +43,8 @@ public class EmpController {
 			return "redirect:empList";
 		}
 		
-		@GetMapping("apiTest")
-		public String apiTest() {
-			return "apiTest";
-		}
+//		@GetMapping("apiTest")
+//		public String apiTest() {
+//			return "apiTest";
+//		}
 }

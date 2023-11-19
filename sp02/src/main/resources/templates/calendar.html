@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FullCalendar Example</title>
+    
+        <!-- FullCalendar CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+    
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+        <!-- Moment.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    
+        <!-- FullCalendar JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    
+        <script>
+            $(document).ready(function () {
+                // 캘린더 초기화 및 설정
+                $('#calendar').fullCalendar({
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month,agendaWeek,agendaDay'
+                    },
+                    defaultView: 'month',
+                    editable: true, // 이벤트를 드래그하여 이동할 수 있도록 함
+                    events: [
+                        {
+                            title: '이벤트 1',
+                            start: '2023-11-01'
+                        },
+                        {
+                            title: '이벤트 2',
+                            start: '2023-11-05',
+                            end: '2023-11-07'
+                        }
+                        // 추가적인 이벤트들을 여기에 추가할 수 있습니다.
+                    ]
+                });
+            });
+        </script>
+            <style>
+        #container {
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        #calendar {
+            flex: 1;
+        }
+
+        #info {
+            flex: 1;
+        }
+
+    </style>
+    </head>
+<body>
+    <div id="container">
+        <!-- FullCalendar 표시 영역 -->
+        <div id="calendar"></div>
+        <div id="info">
+            <h1>소비내역</h1>
+        </div>
+    </div>
+</body>
+</html>

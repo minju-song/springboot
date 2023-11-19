@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <h1 id="code"></h1>
+
+    <script>
+        // 현재 URL에서 쿼리 스트링을 추출
+        const queryString = window.location.search;
+
+        // URLSearchParams 객체 생성
+        const urlParams = new URLSearchParams(queryString);
+
+        // 'code' 파라미터의 값을 가져오기
+        const code = urlParams.get('code');
+
+        console.log(code);
+
+
+
+    </script>
+</body>
+</html>

@@ -12,4 +12,19 @@ public class TestController {
 		model.addAttribute("info", "타임리프가 적용된 경우");
 		return "viewTest";
 	}
+	
+	@GetMapping("apiResult")
+	public String apiResult() {
+		return "apiResult";
+	}
+	
+	@GetMapping("apiAccount")
+	public String apiAccount() {
+		return "apiAccount";
+	}
+	
+	@GetMapping("calendar")
+	public String calendar() {
+		return "calendar";
+	}
 }
