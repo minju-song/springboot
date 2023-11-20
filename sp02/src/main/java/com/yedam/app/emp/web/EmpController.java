@@ -42,11 +42,7 @@ public class EmpController {
 			empService.insertEmpInfo(empVO);
 			return "redirect:empList";
 		}
-//		
-//		@GetMapping("apiTest")
-//		public String apiTest() {
-//			return "apiTest";
-//		}
+
 		
 		@GetMapping("apiResult")
 		public String apiResult() {
@@ -57,4 +53,5 @@ public class EmpController {
 		public String apiAccount() {
 			return "apiAccount";
 		}
+
 }

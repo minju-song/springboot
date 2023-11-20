@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
@@ -51,7 +52,6 @@ public class TestService {
         // Handle the response if needed
         String responseBody = responseEntity.getBody();
         ObjectMapper objectMapper = new ObjectMapper();
-      
-        System.out.println(responseBody);
+
     }
 }
