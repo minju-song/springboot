@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <h2>API RESULT</h2>
+    <script>
+        const searchParams = new URLSearchParams(location.search);
+        var code = '';
+        for (const param of searchParams) {
+            if (param[0] == 'code') {
+                code = param[1];
+                (async () => {
+                    console.log('코드33 : ' + code);
+
+                    const resp = await axios.post('https://testapi.openbanking.or.kr/oauth/2.0/token', {
+                        code,
+                        client_id: '292eb76f-bfdc-4371-85fc-a13807ad427b',
+                        client_secret: '47f2ef55-e92e-4928-aa9a-ed7fb2dae05b',
+                        redirect_uri: 'http://localhost:8099/apiResult',
+                        grant_type: 'authorization_code'
+                    });
+
+                    console.log({ resp });
+                })
+
+
+
+                // let url='https://testapi.openbanking.or.kr/oauth/2.0/token';
+                // payload = 'code='+code+'&client_id=292eb76f-bfdc-4371-85fc-a13807ad427b'+
+                // 			'&client_secret=47f2ef55-e92e-4928-aa9a-ed7fb2dae05b'+
+                // 			'&redirect_uri=http://localhost:8099/apiResult'+
+                // 			'&grant_type=authorization_code';
+                // fetch(url, {
+                // 	method : 'POST',
+                // 	headers : {'Content-Type': 'application/x-www-form-urlencoded'},
+                // 	body : payload
+                // })
+                // .then(resolve=>resolve.json())
+                // .then(result=>console.log(result));
+            }
+        }
+        console.log('코드 : ' + code);
+
+
+    </script>
+</body>
+
+</html>

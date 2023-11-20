@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>account</h1>
+    <button id="apiacc">API</button>
+    <script>
+        let btn = document.getElementById("apiacc");
+
+        btn.addEventListener("click", function (e) {
+            console.log("클릭");
+
+            var tmpWindow = window.open('about:blank');
+            tmpWindow.location = "https://testapi.openbanking.or.kr/oauth/2.0/authorize_account?"
+                + "response_type=code"
+                + "&client_id=292eb76f-bfdc-4371-85fc-a13807ad427b"
+                + "&redirect_uri=http://localhost:8099/apiResult"
+                + "&scope=inquiry%20login%20transfer"
+                + "&state=12345678901234567890123456789012"
+                + "&auth_type=0";
+
+            var fullUrl = window.location.href;
+            console.log(fullUrl);
+
+        })
+
+    </script>
+</body>
+
+</html>
